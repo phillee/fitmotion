@@ -7,21 +7,85 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CEE53C73B31CFF2D86B7C2C /* Pods_Couples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6060B8AED6D6D27489232622 /* Pods_Couples.framework */; };
 		F396352C1C441BBE00A95FC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F396352B1C441BBE00A95FC4 /* AppDelegate.swift */; };
-		F396352E1C441BBE00A95FC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F396352D1C441BBE00A95FC4 /* ViewController.swift */; };
 		F39635311C441BBE00A95FC4 /* Couples.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F396352F1C441BBE00A95FC4 /* Couples.xcdatamodeld */; };
 		F39635341C441BBE00A95FC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39635321C441BBE00A95FC4 /* Main.storyboard */; };
 		F39635361C441BBE00A95FC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39635351C441BBE00A95FC4 /* Assets.xcassets */; };
+		F396353E1C4427BA00A95FC4 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F396353D1C4427BA00A95FC4 /* FeaturedCollectionViewCell.swift */; };
+		F39635401C44290500A95FC4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F396353F1C44290500A95FC4 /* MainViewController.swift */; };
+		F39635441C446A1E00A95FC4 /* cover-cardio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F39635411C446A1E00A95FC4 /* cover-cardio.jpg */; };
+		F39635451C446A1E00A95FC4 /* cover-core.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F39635421C446A1E00A95FC4 /* cover-core.jpg */; };
+		F39635461C446A1E00A95FC4 /* cover-strength.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F39635431C446A1E00A95FC4 /* cover-strength.jpg */; };
+		F396354A1C45B28200A95FC4 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39635491C45B28200A95FC4 /* ProgramViewController.swift */; };
+		F396354C1C45B32C00A95FC4 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F396354B1C45B32C00A95FC4 /* VideoPlayerViewController.swift */; };
+		F396354E1C45B85000A95FC4 /* bg-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F396354D1C45B85000A95FC4 /* bg-1.jpg */; };
+		F3AE697E1C4ABBEB009A3837 /* gina_larry.png in Resources */ = {isa = PBXBuildFile; fileRef = F3AE697D1C4ABBEB009A3837 /* gina_larry.png */; };
+		F3AE69801C4ABF5C009A3837 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE697F1C4ABF5C009A3837 /* IAPHelper.swift */; };
+		F3AE69821C4ABFAA009A3837 /* CouplesIAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE69811C4ABFAA009A3837 /* CouplesIAPHelper.swift */; };
+		F3AE69851C4E998E009A3837 /* ProgramData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE69841C4E998E009A3837 /* ProgramData.swift */; };
+		F3CA66871C478BFF00152A69 /* purple-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66861C478BFF00152A69 /* purple-bg.png */; };
+		F3CA668A1C478D2600152A69 /* img-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66881C478D2600152A69 /* img-1.png */; };
+		F3CA668B1C478D2600152A69 /* img-2.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66891C478D2600152A69 /* img-2.png */; };
+		F3CA668D1C48F9D100152A69 /* ThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA668C1C48F9D100152A69 /* ThumbnailCell.swift */; };
+		F3CA669B1C48FAE100152A69 /* biceps.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66901C48FAE100152A69 /* biceps.png */; };
+		F3CA669C1C48FAE100152A69 /* bridges.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66911C48FAE100152A69 /* bridges.png */; };
+		F3CA669D1C48FAE100152A69 /* deadlift.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66921C48FAE100152A69 /* deadlift.png */; };
+		F3CA669E1C48FAE100152A69 /* hips_shoulders.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66931C48FAE100152A69 /* hips_shoulders.png */; };
+		F3CA669F1C48FAE100152A69 /* lunges.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66941C48FAE100152A69 /* lunges.png */; };
+		F3CA66A01C48FAE100152A69 /* oblique.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66951C48FAE100152A69 /* oblique.png */; };
+		F3CA66A11C48FAE100152A69 /* pushups.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66961C48FAE100152A69 /* pushups.png */; };
+		F3CA66A21C48FAE100152A69 /* squats.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66971C48FAE100152A69 /* squats.png */; };
+		F3CA66A31C48FAE100152A69 /* tricep.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66981C48FAE100152A69 /* tricep.png */; };
+		F3CA66A41C48FAE100152A69 /* upright_row.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66991C48FAE100152A69 /* upright_row.png */; };
+		F3CA66A51C48FAE100152A69 /* warmup.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA669A1C48FAE100152A69 /* warmup.png */; };
+		F3CA66AB1C490C6400152A69 /* intro.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66AA1C490C6400152A69 /* intro.png */; };
+		F3CA66AD1C495C6400152A69 /* play-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66AC1C495C6400152A69 /* play-btn.png */; };
+		F3CA66AF1C49852E00152A69 /* metal_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66AE1C49852D00152A69 /* metal_bg.jpg */; };
+		F3CA66B11C4986AF00152A69 /* concrete-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3CA66B01C4986AF00152A69 /* concrete-bg.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		283DC1D67900C9611F097C06 /* Pods-Couples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Couples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Couples/Pods-Couples.debug.xcconfig"; sourceTree = "<group>"; };
+		6060B8AED6D6D27489232622 /* Pods_Couples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Couples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D16B25D37B5D04A38222E75D /* Pods-Couples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Couples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Couples/Pods-Couples.release.xcconfig"; sourceTree = "<group>"; };
 		F39635281C441BBE00A95FC4 /* Couples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Couples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F396352B1C441BBE00A95FC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F396352D1C441BBE00A95FC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F39635301C441BBE00A95FC4 /* Couples.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Couples.xcdatamodel; sourceTree = "<group>"; };
 		F39635331C441BBE00A95FC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F39635351C441BBE00A95FC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F39635371C441BBE00A95FC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F396353D1C4427BA00A95FC4 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
+		F396353F1C44290500A95FC4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F39635411C446A1E00A95FC4 /* cover-cardio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cover-cardio.jpg"; sourceTree = "<group>"; };
+		F39635421C446A1E00A95FC4 /* cover-core.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cover-core.jpg"; sourceTree = "<group>"; };
+		F39635431C446A1E00A95FC4 /* cover-strength.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cover-strength.jpg"; sourceTree = "<group>"; };
+		F39635491C45B28200A95FC4 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
+		F396354B1C45B32C00A95FC4 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		F396354D1C45B85000A95FC4 /* bg-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg-1.jpg"; sourceTree = "<group>"; };
+		F3AE697D1C4ABBEB009A3837 /* gina_larry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gina_larry.png; sourceTree = "<group>"; };
+		F3AE697F1C4ABF5C009A3837 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		F3AE69811C4ABFAA009A3837 /* CouplesIAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouplesIAPHelper.swift; sourceTree = "<group>"; };
+		F3AE69841C4E998E009A3837 /* ProgramData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramData.swift; sourceTree = "<group>"; };
+		F3CA66861C478BFF00152A69 /* purple-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-bg.png"; sourceTree = "<group>"; };
+		F3CA66881C478D2600152A69 /* img-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-1.png"; sourceTree = "<group>"; };
+		F3CA66891C478D2600152A69 /* img-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-2.png"; sourceTree = "<group>"; };
+		F3CA668C1C48F9D100152A69 /* ThumbnailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailCell.swift; sourceTree = "<group>"; };
+		F3CA66901C48FAE100152A69 /* biceps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = biceps.png; sourceTree = "<group>"; };
+		F3CA66911C48FAE100152A69 /* bridges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bridges.png; sourceTree = "<group>"; };
+		F3CA66921C48FAE100152A69 /* deadlift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deadlift.png; sourceTree = "<group>"; };
+		F3CA66931C48FAE100152A69 /* hips_shoulders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hips_shoulders.png; sourceTree = "<group>"; };
+		F3CA66941C48FAE100152A69 /* lunges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lunges.png; sourceTree = "<group>"; };
+		F3CA66951C48FAE100152A69 /* oblique.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oblique.png; sourceTree = "<group>"; };
+		F3CA66961C48FAE100152A69 /* pushups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushups.png; sourceTree = "<group>"; };
+		F3CA66971C48FAE100152A69 /* squats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squats.png; sourceTree = "<group>"; };
+		F3CA66981C48FAE100152A69 /* tricep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tricep.png; sourceTree = "<group>"; };
+		F3CA66991C48FAE100152A69 /* upright_row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upright_row.png; sourceTree = "<group>"; };
+		F3CA669A1C48FAE100152A69 /* warmup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warmup.png; sourceTree = "<group>"; };
+		F3CA66AA1C490C6400152A69 /* intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro.png; sourceTree = "<group>"; };
+		F3CA66AC1C495C6400152A69 /* play-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-btn.png"; sourceTree = "<group>"; };
+		F3CA66AE1C49852D00152A69 /* metal_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = metal_bg.jpg; sourceTree = "<group>"; };
+		F3CA66B01C4986AF00152A69 /* concrete-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "concrete-bg.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +93,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CEE53C73B31CFF2D86B7C2C /* Pods_Couples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26DA0C29CBB6395871363314 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				283DC1D67900C9611F097C06 /* Pods-Couples.debug.xcconfig */,
+				D16B25D37B5D04A38222E75D /* Pods-Couples.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B25EC2CC8B37D018AA4CB36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6060B8AED6D6D27489232622 /* Pods_Couples.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F396351F1C441BBE00A95FC4 = {
 			isa = PBXGroup;
 			children = (
 				F396352A1C441BBE00A95FC4 /* Couples */,
 				F39635291C441BBE00A95FC4 /* Products */,
+				26DA0C29CBB6395871363314 /* Pods */,
+				5B25EC2CC8B37D018AA4CB36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +138,68 @@
 		F396352A1C441BBE00A95FC4 /* Couples */ = {
 			isa = PBXGroup;
 			children = (
+				F3AE69831C4E94A3009A3837 /* Images */,
+				F3CA668E1C48FAC900152A69 /* Thumbnails */,
 				F396352B1C441BBE00A95FC4 /* AppDelegate.swift */,
-				F396352D1C441BBE00A95FC4 /* ViewController.swift */,
 				F39635321C441BBE00A95FC4 /* Main.storyboard */,
+				F396353D1C4427BA00A95FC4 /* FeaturedCollectionViewCell.swift */,
 				F39635351C441BBE00A95FC4 /* Assets.xcassets */,
 				F39635371C441BBE00A95FC4 /* Info.plist */,
 				F396352F1C441BBE00A95FC4 /* Couples.xcdatamodeld */,
+				F396353F1C44290500A95FC4 /* MainViewController.swift */,
+				F39635491C45B28200A95FC4 /* ProgramViewController.swift */,
+				F396354B1C45B32C00A95FC4 /* VideoPlayerViewController.swift */,
+				F3CA668C1C48F9D100152A69 /* ThumbnailCell.swift */,
+				F3AE697F1C4ABF5C009A3837 /* IAPHelper.swift */,
+				F3AE69811C4ABFAA009A3837 /* CouplesIAPHelper.swift */,
+				F3AE69841C4E998E009A3837 /* ProgramData.swift */,
 			);
 			path = Couples;
+			sourceTree = "<group>";
+		};
+		F3AE69831C4E94A3009A3837 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F39635411C446A1E00A95FC4 /* cover-cardio.jpg */,
+				F39635421C446A1E00A95FC4 /* cover-core.jpg */,
+				F39635431C446A1E00A95FC4 /* cover-strength.jpg */,
+				F3CA66861C478BFF00152A69 /* purple-bg.png */,
+				F396354D1C45B85000A95FC4 /* bg-1.jpg */,
+				F3CA66881C478D2600152A69 /* img-1.png */,
+				F3CA66AE1C49852D00152A69 /* metal_bg.jpg */,
+				F3CA66B01C4986AF00152A69 /* concrete-bg.jpg */,
+				F3CA66891C478D2600152A69 /* img-2.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		F3CA668E1C48FAC900152A69 /* Thumbnails */ = {
+			isa = PBXGroup;
+			children = (
+				F3CA66AC1C495C6400152A69 /* play-btn.png */,
+				F3AE697D1C4ABBEB009A3837 /* gina_larry.png */,
+				F3CA668F1C48FACF00152A69 /* Strength */,
+			);
+			name = Thumbnails;
+			sourceTree = "<group>";
+		};
+		F3CA668F1C48FACF00152A69 /* Strength */ = {
+			isa = PBXGroup;
+			children = (
+				F3CA66901C48FAE100152A69 /* biceps.png */,
+				F3CA66911C48FAE100152A69 /* bridges.png */,
+				F3CA66AA1C490C6400152A69 /* intro.png */,
+				F3CA66921C48FAE100152A69 /* deadlift.png */,
+				F3CA66931C48FAE100152A69 /* hips_shoulders.png */,
+				F3CA66941C48FAE100152A69 /* lunges.png */,
+				F3CA66951C48FAE100152A69 /* oblique.png */,
+				F3CA66961C48FAE100152A69 /* pushups.png */,
+				F3CA66971C48FAE100152A69 /* squats.png */,
+				F3CA66981C48FAE100152A69 /* tricep.png */,
+				F3CA66991C48FAE100152A69 /* upright_row.png */,
+				F3CA669A1C48FAE100152A69 /* warmup.png */,
+			);
+			name = Strength;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F396353A1C441BBE00A95FC4 /* Build configuration list for PBXNativeTarget "Couples" */;
 			buildPhases = (
+				517C5163B47F8955681114FE /* Check Pods Manifest.lock */,
 				F39635241C441BBE00A95FC4 /* Sources */,
 				F39635251C441BBE00A95FC4 /* Frameworks */,
 				F39635261C441BBE00A95FC4 /* Resources */,
+				99493E8E65695B9C2C640A63 /* Embed Pods Frameworks */,
+				B175464B7D372CACCCA8CB7F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +237,7 @@
 				TargetAttributes = {
 					F39635271C441BBE00A95FC4 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YGZ6UVC5AG;
 					};
 				};
 			};
@@ -122,21 +264,99 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F39635461C446A1E00A95FC4 /* cover-strength.jpg in Resources */,
+				F3CA669E1C48FAE100152A69 /* hips_shoulders.png in Resources */,
+				F39635451C446A1E00A95FC4 /* cover-core.jpg in Resources */,
+				F3CA66871C478BFF00152A69 /* purple-bg.png in Resources */,
+				F3CA66A21C48FAE100152A69 /* squats.png in Resources */,
 				F39635361C441BBE00A95FC4 /* Assets.xcassets in Resources */,
+				F3CA669D1C48FAE100152A69 /* deadlift.png in Resources */,
+				F3CA66A11C48FAE100152A69 /* pushups.png in Resources */,
+				F3CA66A01C48FAE100152A69 /* oblique.png in Resources */,
+				F3CA66A41C48FAE100152A69 /* upright_row.png in Resources */,
 				F39635341C441BBE00A95FC4 /* Main.storyboard in Resources */,
+				F3CA66A31C48FAE100152A69 /* tricep.png in Resources */,
+				F396354E1C45B85000A95FC4 /* bg-1.jpg in Resources */,
+				F3CA66A51C48FAE100152A69 /* warmup.png in Resources */,
+				F3CA66AB1C490C6400152A69 /* intro.png in Resources */,
+				F39635441C446A1E00A95FC4 /* cover-cardio.jpg in Resources */,
+				F3AE697E1C4ABBEB009A3837 /* gina_larry.png in Resources */,
+				F3CA669F1C48FAE100152A69 /* lunges.png in Resources */,
+				F3CA66AF1C49852E00152A69 /* metal_bg.jpg in Resources */,
+				F3CA668A1C478D2600152A69 /* img-1.png in Resources */,
+				F3CA66B11C4986AF00152A69 /* concrete-bg.jpg in Resources */,
+				F3CA66AD1C495C6400152A69 /* play-btn.png in Resources */,
+				F3CA668B1C478D2600152A69 /* img-2.png in Resources */,
+				F3CA669C1C48FAE100152A69 /* bridges.png in Resources */,
+				F3CA669B1C48FAE100152A69 /* biceps.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		517C5163B47F8955681114FE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99493E8E65695B9C2C640A63 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Couples/Pods-Couples-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B175464B7D372CACCCA8CB7F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Couples/Pods-Couples-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F39635241C441BBE00A95FC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F396353E1C4427BA00A95FC4 /* FeaturedCollectionViewCell.swift in Sources */,
 				F39635311C441BBE00A95FC4 /* Couples.xcdatamodeld in Sources */,
-				F396352E1C441BBE00A95FC4 /* ViewController.swift in Sources */,
+				F3CA668D1C48F9D100152A69 /* ThumbnailCell.swift in Sources */,
+				F3AE69821C4ABFAA009A3837 /* CouplesIAPHelper.swift in Sources */,
+				F3AE69801C4ABF5C009A3837 /* IAPHelper.swift in Sources */,
+				F396354C1C45B32C00A95FC4 /* VideoPlayerViewController.swift in Sources */,
 				F396352C1C441BBE00A95FC4 /* AppDelegate.swift in Sources */,
+				F39635401C44290500A95FC4 /* MainViewController.swift in Sources */,
+				F396354A1C45B28200A95FC4 /* ProgramViewController.swift in Sources */,
+				F3AE69851C4E998E009A3837 /* ProgramData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,25 +457,33 @@
 		};
 		F396353B1C441BBE00A95FC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 283DC1D67900C9611F097C06 /* Pods-Couples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Couples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fitmotion.Couples;
+				PRODUCT_BUNDLE_IDENTIFIER = com.healtho.couples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		F396353C1C441BBE00A95FC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D16B25D37B5D04A38222E75D /* Pods-Couples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Couples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fitmotion.Couples;
+				PRODUCT_BUNDLE_IDENTIFIER = com.healtho.couples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -278,6 +506,7 @@
 				F396353C1C441BBE00A95FC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
