@@ -23,7 +23,7 @@ class FeaturedCollectionViewCell: UICollectionViewCell {
         super.init(coder: aDecoder)
     }
 
-    private func commonInit()
+    fileprivate func commonInit()
     {
         // Initialization code
 
@@ -32,8 +32,8 @@ class FeaturedCollectionViewCell: UICollectionViewCell {
         self.setNeedsDisplay()
     }
 
-    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
-        if (self.focused)
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        if (self.isFocused)
         {
             self.featuredImage.adjustsImageWhenAncestorFocused = true
         }

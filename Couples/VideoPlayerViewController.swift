@@ -20,21 +20,21 @@ class VideoPlayerViewController: AVPlayerViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func playVideo(videoUrl: String) {
+    func playVideo(_ videoUrl: String) {
         if player != nil {
             // kill it?
         }
 
-        player = AVPlayer(URL: NSURL(string: videoUrl)!)
+        player = AVPlayer(url: URL(string: videoUrl)!)
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDidFinishPlaying:", name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(VideoPlayerViewController.itemDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
 
         player?.play()
     }
 
 
-    func itemDidFinishPlaying(notification: NSNotification) {
-        self.dismissViewControllerAnimated(false, completion: nil)
+    func itemDidFinishPlaying(_ notification: Notification) {
+        self.dismiss(animated: false, completion: nil)
     }
 
     /*

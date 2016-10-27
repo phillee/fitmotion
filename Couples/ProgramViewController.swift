@@ -26,7 +26,7 @@ class ProgramViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.descriptionView.textContainer.lineFragmentPadding = 0
-        self.descriptionView.textContainerInset = UIEdgeInsetsZero
+        self.descriptionView.textContainerInset = UIEdgeInsets.zero
         playIntroButton.imageView!.adjustsImageWhenAncestorFocused = true
         playIntroButton.imageView!.clipsToBounds = false
 
@@ -34,13 +34,13 @@ class ProgramViewController: UIViewController {
 //        player.play()
     }
 
-    @IBAction func playButtonPressed(sender: AnyObject) {
+    @IBAction func playButtonPressed(_ sender: AnyObject) {
     }
     
-    @IBAction func introButtonPressed(sender: AnyObject) {
+    @IBAction func introButtonPressed(_ sender: AnyObject) {
         let playerVC = VideoPlayerViewController()
         playerVC.playVideo(introVideoUrl)
-        [self.presentViewController(playerVC, animated: true, completion: nil)]
+        self.present(playerVC, animated: true, completion: nil)
     }
 
 //    func initVideo() {
@@ -52,11 +52,11 @@ class ProgramViewController: UIViewController {
 //    }
 
 
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
         let playerVC = VideoPlayerViewController()
-        let data = programData.sectionData[indexPath.item]
+        let data = programData.sectionData[(indexPath as NSIndexPath).item]
         playerVC.playVideo(data.videoUrl)
-        [self.presentViewController(playerVC, animated: true, completion: nil)]
+        self.present(playerVC, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,25 +65,25 @@ class ProgramViewController: UIViewController {
     }
 
     // Collection View rendering
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 10
     }
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 10
     }
 
-    func collectionView(collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         insetForSectionAtIndex section: Int) -> UIEdgeInsets {
             return UIEdgeInsets(top: 0.0, left: 50.0, bottom: 0.0, right: 50.0)
     }
 
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSectionsInCollectionView(_ collectionView: UICollectionView) -> Int {
         return 1
     }
 
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         if (collectionView == self.collectionView)
         {
@@ -93,17 +93,17 @@ class ProgramViewController: UIViewController {
         return 0
     }
 
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAtIndexPath indexPath: IndexPath) -> UICollectionViewCell {
 
         if (collectionView == self.collectionView)
         {
-            let cell : ThumbnailCell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseIdentifierThumbnail, forIndexPath: indexPath) as! ThumbnailCell
+            let cell : ThumbnailCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifierThumbnail, for: indexPath) as! ThumbnailCell
 
-            let data = programData.sectionData[indexPath.item]
+            let data = programData.sectionData[(indexPath as NSIndexPath).item]
 
             let imageFilename = data.image
-            cell.image.image = UIImage(named: imageFilename)
-            cell.label.text = data.name.uppercaseString
+            cell.image.image = UIImage(named: imageFilename!)
+            cell.label.text = data.name.uppercased()
 
             return cell
         }

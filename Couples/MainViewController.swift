@@ -35,47 +35,47 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout, 
 
     }
 
-    @IBAction func playIntro(sender: AnyObject) {
+    @IBAction func playIntro(_ sender: AnyObject) {
         let playerVC = VideoPlayerViewController()
         playerVC.playVideo(introVideoUrl)
-        [self.presentViewController(playerVC, animated: true, completion: nil)]
+        self.present(playerVC, animated: true, completion: nil)
     }
 
     func initVideo() {
-        player = AVPlayer(URL: NSURL(string: introVideoUrl)!)
+        player = AVPlayer(url: URL(string: introVideoUrl)!)
 
         playerLayer = AVPlayerLayer(player: player)
         introVideoView.layer.addSublayer(playerLayer)
         playerLayer.frame = introVideoView.bounds
     }
 
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let programVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ProgramViewController") as! ProgramViewController
-        programVC.programData = ProgramData.CouplesWorkouts[indexPath.item]
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let programVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProgramViewController") as! ProgramViewController
+        programVC.programData = ProgramData.CouplesWorkouts[(indexPath as NSIndexPath).item]
 
-        [self.presentViewController(programVC, animated: true, completion: nil)]
+        [self.present(programVC, animated: true, completion: nil)]
     }
 
     // Collection View rendering
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 50
     }
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 50
     }
 
-    func collectionView(collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
-        insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        insetForSectionAt section: Int) -> UIEdgeInsets {
             return UIEdgeInsets(top: 0.0, left: 50.0, bottom: 0.0, right: 50.0)
     }
 
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         if (collectionView == self.collectionView1)
         {
@@ -85,13 +85,13 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout, 
         return 0
     }
 
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         if (collectionView == self.collectionView1)
         {
-            let cell : FeaturedCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseIdentifierFeatured, forIndexPath: indexPath) as! FeaturedCollectionViewCell
+            let cell : FeaturedCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifierFeatured, for: indexPath) as! FeaturedCollectionViewCell
 
-            let programData = ProgramData.CouplesWorkouts[indexPath.item]
+            let programData = ProgramData.CouplesWorkouts[(indexPath as NSIndexPath).item]
             cell.featuredImage.image = UIImage(named: programData.coverImage)
 
             return cell

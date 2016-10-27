@@ -7,23 +7,23 @@ public let IAPHelperProductPurchasedNotification = "IAPHelperProductPurchasedNot
 public typealias ProductIdentifier = String
 
 /// Completion handler called when products are fetched.
-public typealias RequestProductsCompletionHandler = (success: Bool, products: [SKProduct]) -> ()
+public typealias RequestProductsCompletionHandler = (_ success: Bool, _ products: [SKProduct]) -> ()
 
 
 /// A Helper class for In-App-Purchases, it can fetch products, tell you if a product has been purchased,
 /// purchase products, and restore purchases.  Uses NSUserDefaults to cache if a product has been purchased.
-public class IAPHelper : NSObject  {
+open class IAPHelper : NSObject  {
     /// MARK: - User facing API
 
     /// MARK: - Private Properties
 
     // Used to keep track of the possible products and which ones have been purchased.
-    private let productIdentifiers: Set<ProductIdentifier>
-    private var purchasedProductIdentifiers = Set<ProductIdentifier>()
+    fileprivate let productIdentifiers: Set<ProductIdentifier>
+    fileprivate var purchasedProductIdentifiers = Set<ProductIdentifier>()
 
     // Used by SKProductsRequestDelegate
-    private var productsRequest: SKProductsRequest?
-    private var completionHandler: RequestProductsCompletionHandler?
+    fileprivate var productsRequest: SKProductsRequest?
+    fileprivate var completionHandler: RequestProductsCompletionHandler?
 
     /// Initialize the helper.  Pass in the set of ProductIdentifiers supported by the app.
     public init(productIdentifiers: Set<ProductIdentifier>) {
@@ -32,8 +32,8 @@ public class IAPHelper : NSObject  {
     }
 
     /// Gets the list of SKProducts from the Apple server calls the handler with the list of products.
-    public func requestProductsWithCompletionHandler(handler: RequestProductsCompletionHandler) {
-        handler(success: false, products: [])
+    open func requestProductsWithCompletionHandler(_ handler: @escaping RequestProductsCompletionHandler) {
+        handler(false, [])
         completionHandler = handler
         productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers)
         productsRequest?.delegate = self
@@ -41,27 +41,27 @@ public class IAPHelper : NSObject  {
     }
 
     /// Initiates purchase of a product.
-    public func purchaseProduct(product: SKProduct) {
+    open func purchaseProduct(_ product: SKProduct) {
     }
 
     /// Given the product identifier, returns true if that product has been purchased.
-    public func isProductPurchased(productIdentifier: ProductIdentifier) -> Bool {
+    open func isProductPurchased(_ productIdentifier: ProductIdentifier) -> Bool {
         return false
     }
 
     /// If the state of whether purchases have been made is lost  (e.g. the
     /// user deletes and reinstalls the app) this will recover the purchases.
-    public func restoreCompletedTransactions() {
+    open func restoreCompletedTransactions() {
     }
 }
 
 // MARK: - SKProductsRequestDelegate
 
 extension IAPHelper: SKProductsRequestDelegate {
-    public func productsRequest(request: SKProductsRequest!, didReceiveResponse response: SKProductsResponse!) {
+    public func productsRequest(_ request: SKProductsRequest!, didReceive response: SKProductsResponse!) {
         print("Loaded list of products...")
-        let products = response.products as! [SKProduct]
-        completionHandler?(success: true, products: products)
+        let products = response.products 
+        completionHandler?(true, products)
         clearRequest()
 
         // debug printing
@@ -70,13 +70,13 @@ extension IAPHelper: SKProductsRequestDelegate {
         }
     }
 
-    public func request(request: SKRequest!, didFailWithError error: NSError!) {
+    public func request(_ request: SKRequest!, didFailWithError error: Error) {
         print("Failed to load list of products.")
         print("Error: \(error)")
         clearRequest()
     }
 
-    private func clearRequest() {
+    fileprivate func clearRequest() {
         productsRequest = nil
         completionHandler = nil
     }
