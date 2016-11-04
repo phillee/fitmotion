@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11542" systemVersion="16B2553a" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -21,6 +26,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="metal_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q9X-Le-41v">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dg7-T5-FWi">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
@@ -40,7 +46,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeaturedCell" id="pC8-vY-1o1" customClass="FeaturedCollectionViewCell" customModule="Couples" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProgramCell" id="pC8-vY-1o1" customClass="ProgramCell" customModule="Couples" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="570" height="930"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -54,7 +60,6 @@
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </view>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="uBN-6L-KIk" secondAttribute="bottom" constant="100" id="K20-mY-gSo"/>
@@ -76,6 +81,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bu3-Hu-qQO">
                                                         <rect key="frame" x="69" y="44" width="743" height="86"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="38"/>
                                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                                         <state key="normal" title="A message from Gina and Larry"/>
@@ -85,15 +91,31 @@
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gina_larry.png" translatesAutoresizingMaskIntoConstraints="NO" id="UVZ-52-88W">
                                                         <rect key="frame" x="652" y="22" width="143" height="110"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhh-wC-8Rc">
+                                                        <rect key="frame" x="1404" y="44" width="453" height="86"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="86" id="sN9-dV-zFM"/>
+                                                            <constraint firstAttribute="width" constant="453" id="wTu-cU-yBe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="38"/>
+                                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                        <state key="normal" title="Restore Purchases"/>
+                                                        <connections>
+                                                            <action selector="restoreAvtion:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="5Ut-q4-fdK"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="APO-y6-j7n"/>
+                                                    <constraint firstItem="Hhh-wC-8Rc" firstAttribute="top" secondItem="FdI-gn-qTQ" secondAttribute="top" constant="44" id="XUE-rw-Zsh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Hhh-wC-8Rc" secondAttribute="trailing" constant="63" id="zfR-lA-9pi"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="FdI-gn-qTQ" firstAttribute="top" secondItem="RPM-ry-Iyg" secondAttribute="top" id="5eu-bA-Gd3"/>
                                             <constraint firstItem="FdI-gn-qTQ" firstAttribute="leading" secondItem="RPM-ry-Iyg" secondAttribute="leading" id="BHp-uq-qqO"/>
@@ -106,7 +128,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1920" id="Dwn-CW-MV0"/>
                                     <constraint firstItem="RPM-ry-Iyg" firstAttribute="leading" secondItem="dg7-T5-FWi" secondAttribute="leading" id="aJp-oh-xye"/>
@@ -116,7 +138,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dg7-T5-FWi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PNQ-iH-2K0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dg7-T5-FWi" secondAttribute="bottom" id="SKY-fv-aq9"/>
@@ -125,7 +147,6 @@
                     </view>
                     <connections>
                         <outlet property="collectionView1" destination="2ov-hT-I8U" id="f3T-Vf-zsv"/>
-                        <outlet property="scrollView" destination="dg7-T5-FWi" id="p07-Ib-ANL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -159,7 +180,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThumbnailCell" id="SOI-hB-caL" customClass="ThumbnailCell" customModule="Couples" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SectionCell" id="SOI-hB-caL" customClass="SectionCell" customModule="Couples" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -175,13 +196,12 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BICEP CURLS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="w08-jf-juj">
                                                     <rect key="frame" x="8" y="244" width="384" height="38"/>
                                                     <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="28"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="highlightedColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="shadowColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <size key="shadowOffset" width="-1" height="-1"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="bottomMargin" secondItem="w08-jf-juj" secondAttribute="bottom" constant="10" id="AV5-rY-Odn"/>
@@ -204,7 +224,7 @@
                             </collectionView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbk-3e-OAh">
                                 <rect key="frame" x="340" y="50" width="650" height="500"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
@@ -213,11 +233,11 @@
                                     <constraint firstAttribute="height" constant="500" id="iS0-2u-6y7"/>
                                 </constraints>
                                 <string key="text">This full-body strength training routine targets all the major muscle groups and includes ''couple's exercises'' designed to build muscle tone, endurance, and balance.   Simple movements alternate between upper and lower body muscles, allowing a small rest and recovery period in between.  Three levels of difficulty are offered so you can continue to challenge yourself and stay motivated. It requires only a pair of hand held weights - and your partner. Build your strength while building a strong relationship!</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feature-2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DJC-sa-XN4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJC-sa-XN4">
                                 <rect key="frame" x="70" y="50" width="250" height="353"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DJC-sa-XN4" secondAttribute="height" multiplier="1533:2163" id="0nF-Ch-I0y"/>
@@ -242,7 +262,6 @@
                                     <constraint firstAttribute="width" constant="800" id="Lfx-Ux-uBJ"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Button" image="intro.png"/>
                                 <connections>
                                     <action selector="introButtonPressed:" destination="evc-m0-kt3" eventType="primaryActionTriggered" id="AAV-vV-qbF"/>
                                 </connections>
@@ -270,7 +289,9 @@
                     <connections>
                         <outlet property="collectionView" destination="USF-wX-yfi" id="Y9k-wX-vzB"/>
                         <outlet property="descriptionView" destination="gbk-3e-OAh" id="Zsr-Zg-YzX"/>
+                        <outlet property="playButton" destination="2z7-Gm-Ht0" id="qaM-3k-3I9"/>
                         <outlet property="playIntroButton" destination="Lc0-jj-Fqo" id="zrm-aP-Pwd"/>
+                        <outlet property="programImageView" destination="DJC-sa-XN4" id="s1T-6Z-HdM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZj-2G-COu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,9 +300,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="feature-2.jpg" width="1533" height="2163"/>
         <image name="gina_larry.png" width="704" height="544"/>
-        <image name="intro.png" width="1280" height="720"/>
         <image name="metal_bg.jpg" width="1920" height="1080"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <nil key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>

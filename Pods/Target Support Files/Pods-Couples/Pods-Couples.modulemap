@@ -1,0 +1,6 @@
+framework module Pods_Couples {
+  umbrella header "Pods-Couples-umbrella.h"
+
+  export *
+  module * { export * }
+}
