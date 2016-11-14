@@ -22,6 +22,9 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout, 
     
     /* Data */
     var content: NSArray = []
+    
+    var playerVC = VideoPlayerViewController()
+
 
     
     // MARK: - Lifecycle
@@ -34,6 +37,9 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout, 
     
     // MARK: - Actions
     @IBAction func playIntro(_ sender: AnyObject) {
+        
+        playerVC.playVideo("https://s3-us-west-2.amazonaws.com/couples-workouts/promo.mp4")
+        present(playerVC, animated: true, completion: nil)
     }
     
     @IBAction func restoreAvtion(_ sender: AnyObject) {

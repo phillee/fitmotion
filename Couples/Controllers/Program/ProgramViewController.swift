@@ -109,8 +109,9 @@ class ProgramViewController: UIViewController, UICollectionViewDataSource, UICol
     
     private func didPurchased() {
         
-        self.isPurchased = true
-        self.collectionView.reloadData()
+        setupPlayButton(pricaString: "Play")
+        isPurchased = true
+        collectionView.reloadData()
         
         UserDefaults.standard.set(true, forKey: program.appleProductId!)
         UserDefaults.standard.synchronize()
@@ -120,9 +121,23 @@ class ProgramViewController: UIViewController, UICollectionViewDataSource, UICol
     // MARK: Actions
     @IBAction func playButtonPressed(_ sender: AnyObject) {
         
-        let section:Section     = program.sections.firstObject as! Section
-        playerVC.playVideo(section.videoUrl!)
-        present(playerVC, animated: true, completion: nil)
+        if (isPurchased) {
+            
+            let section:Section = program.sections.firstObject as! Section
+            
+            tryToPlay(section: section)
+        }
+        else {
+            
+            SwiftyStoreKit.purchaseProduct(program.appleProductId!) { result in
+                switch result {
+                case .success( _):
+                    self.didPurchased()
+                case .error(let error):
+                    print("Purchase Failed: \(error)")
+                }
+            }
+        }
     }
     
     @IBAction func introButtonPressed(_ sender: AnyObject) {
