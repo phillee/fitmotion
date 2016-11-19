@@ -1,11 +1,16 @@
 {
   "images" : [
     {
-      "orientation" : "landscape",
-      "idiom" : "tv",
+      "idiom" : "universal",
       "filename" : "top shelfpsd.png",
-      "extent" : "full-screen",
-      "minimum-system-version" : "9.0",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "tv",
       "scale" : "1x"
     }
   ],
